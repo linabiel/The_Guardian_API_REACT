@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ArticleList from "../components/ArticleList";
+import ArticleSelect from "../components/ArticleSelect";
 
 const ArticleContainer = () => {
     const [articles, setArticles] = useState([]);
@@ -21,8 +22,9 @@ const ArticleContainer = () => {
     
     return(
         <>
-            <ArticleList articles={articles} onArticleSelected={onArticleSelected}/>
-            
+            {/*<ArticleList articles={articles} />*/}
+            <ArticleSelect articles={articles} onArticleSelected={onArticleSelected} />
+            {selectedArticle ? <ArticleDetail selectedArticle={selectedArticle} /> : null}
         </>
     );
 };
