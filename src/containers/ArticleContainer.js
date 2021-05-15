@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ArticleList from "../components/ArticleList";
 import ArticleSelect from "../components/ArticleSelect";
+import ArticleDetail from "../components/ArticleDetail";
+import './ArticleContainer.css';
 
 const ArticleContainer = () => {
     const [articles, setArticles] = useState([]);
@@ -19,6 +21,10 @@ const ArticleContainer = () => {
     const onArticleSelected = function (article) {
         setSelectedArticle(article);
     };
+    
+    const onSectionClick = function (article) {
+        setSelectedArticle(article)
+    }
     
     return(
         <>

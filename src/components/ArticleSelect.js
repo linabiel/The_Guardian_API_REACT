@@ -1,24 +1,22 @@
 import React from "react";
 import Article from "./Article";
 
-const ArticleSelect = ({articles, onArticleSelected}) => {
+const ArticleSelect = ({articles, onArticleSelected, onSectionClick}) => {
 	
 	const handleChange = function(event) {
 		const chosenArticle = articles[event.target.value];
 		onArticleSelected(chosenArticle);
 	}
 	
-	const articleItems = articles.map((article, index) => {
-		return <Article article={article} key={index} onChange={onArticleSelected} />;
+    const ArticleOptions = articles.map((article, index) => {
+      return <option value={index} key={index}>{article.webTitle}</option>
     })
-	
-    const newLocal = <option value={articles.index}> {articles}</option>;
+
     return (
-        <div>
-            <select name="article" id="article" value={articles.index} onChange={handleChange}>
-                {articleItems}
-            </select>
-        </div>
+        <select defaultValue="" onChange={handleChange}>
+            <option value="" selected>Choose an Article</option>
+            {ArticleOptions}
+        </select>
     )
 
 }
