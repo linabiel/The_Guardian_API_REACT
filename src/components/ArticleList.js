@@ -1,19 +1,16 @@
-import React from "react";
-import Article from "./Article";
-
-const ArticleList = ({articles}) => {
-	
-	const articleItems = articles.map((article, index) => {
-		return <Article article={article} key={index}/>
-	})
-	
-	return(
-		<div>
-			<ol>
-				{articleItems}
-			</ol>
-		</div>
-	)
-}
-
-export default ArticleList;
+// import React from "react";
+//
+// const ArticleList = (articles, sectionName) => {
+//
+// 	const articleItems = articles.filter((article) => article.sectionName === "Politics")
+// 	console.log(articleItems)
+// 	return(
+// 		<div>
+// 			<ol>
+// 				By Section: {articleItems}
+// 			</ol>
+// 		</div>
+// 	)
+// }
+//
+// export default ArticleList;

@@ -1,7 +1,6 @@
 import React from "react";
-import Article from "./Article";
 
-const ArticleSelect = ({articles, onArticleSelected, onSectionClick}) => {
+const ArticleSelect = ({articles, onArticleSelected}) => {
 	
 	const handleChange = function(event) {
 		const chosenArticle = articles[event.target.value];
